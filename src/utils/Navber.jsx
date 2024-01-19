@@ -27,33 +27,40 @@ const Navber = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Home</a>
+                <Link to='/'>Home</Link>
               </li>
               <li>
-                <a>Blog</a>
-                </li>
+                <Link to='/'>Blog</Link>
+              </li>
               <li>
-                <a>Item 3</a>
+                <Link to='/'>abouts</Link>
               </li>
             </ul>
           </div>
-          <Link to='' className="btn btn-ghost text-xl text-gray-600 font-bold  ">Hungry <span className=" text-red-700 font-bold">Resturant</span></Link>
+          <Link
+            to=""
+            className="btn btn-ghost text-xl text-gray-600 font-bold  "
+          >
+            Hungry <span className=" text-red-700 font-bold">Resturant</span>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Item 1</a>
+              <Link to='/'> Home</Link>
             </li>
             <li>
-                <a>home</a>
+              <Link to='/'> blog</Link>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link to='/'> abouts</Link>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to='' className="btn mr-4">Button</Link>
+          <Link to="" className="btn mr-4">
+            Button
+          </Link>
         </div>
       </div>
     </div>
