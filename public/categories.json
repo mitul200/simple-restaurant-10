@@ -1,0 +1,42 @@
+[
+    {
+        "id": "0",
+        "name": "All recipe"
+        
+    },
+    {
+        "id": "1",
+        "name": "fish recipe",
+        "img": "https://images.pexels.com/photos/842142/pexels-photo-842142.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "id": "2",
+        "name": "vagetable recipe",
+        "img" : "https://www.pexels.com/photo/top-view-of-vegetables-and-seeds-lying-on-red-background-5966137/"
+    },
+    {
+        "id": "3",
+        "name": "rice recipe",
+        "img": "https://images.pexels.com/photos/9705325/pexels-photo-9705325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "id": "4",
+        "name": "chicken recipe",
+        "img" :"https://images.pexels.com/photos/6607320/pexels-photo-6607320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "id": "5",
+        "name": "burger recipe",
+        "img": "https://images.pexels.com/photos/1556688/pexels-photo-1556688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "id": "6",
+        "name": "biriyani recipe",
+        "img":"https://images.pexels.com/photos/6260921/pexels-photo-6260921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "id": "7",
+        "name": "beef recipe",
+        "img": "https://images.pexels.com/photos/410648/pexels-photo-410648.jpeg?auto=compress&cs=tinysrgb&w=600"
+    }
+]
