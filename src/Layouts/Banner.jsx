@@ -5,7 +5,7 @@ const Banner = () => {
     <div>
       <div className=" relative">
         <img className=" w-screen h-screen" src={bannerimg} alt="" />
-        <div className=" absolute top-44 left-32 space-y-3">
+        <div className=" absolute top-44 sm:left-28 md:left-32 space-y-3">
           <h2 className=" text-6xl font-semibold text-white">
             Welcome to our Brand New <br />
             <span className="text-gray-300">Hungry</span>

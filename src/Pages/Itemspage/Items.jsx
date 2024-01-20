@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import ItemsCards from "../ItemsCards/ItemsCards";
 
 const Items = () => {
     const items = useLoaderData()
@@ -6,9 +7,9 @@ const Items = () => {
     return (
         <div>
             <h2 className="text-center my-4">This is items pages</h2>
-            <div>
+            <div className="grid grid-cols-2 md:grid-cols-3 mx-8 mt-20">
                 {
-                    items.map(item=>console.log(item))
+                    items.slice(0,6).map(item=><ItemsCards key={item._id} item={item}></ItemsCards>)
                 }
             </div>
         </div>
