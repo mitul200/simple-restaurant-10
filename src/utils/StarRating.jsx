@@ -4,7 +4,7 @@ import { FaRegStar } from "react-icons/fa6";
 
 // eslint-disable-next-line react/prop-types
 const StarRating = ({ rating }) => {
-  console.log(rating);
+//   console.log(rating);
   const ratingStar = Array.from({ length: 5 }, (elem, index) => {
     let numbers = index + 0.5;
     return (

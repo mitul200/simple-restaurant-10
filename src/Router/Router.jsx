@@ -4,6 +4,7 @@ import {
 import MainLayout from "../Layouts/MainLayout";
 import RecipeDemos from "../Pages/Recipedemo/RecipeDemos";
 import Items from "../Pages/Itemspage/Items";
+import RecipeInfo from "../Pages/Recipedemo/RecipeInfo";
 
   const router = createBrowserRouter([
     {
@@ -23,6 +24,17 @@ import Items from "../Pages/Itemspage/Items";
         }
       ]
     },
+    {
+      path:"/categories",
+      element:<MainLayout></MainLayout>,
+      children:[
+        {
+          path:':id',
+          element:<RecipeInfo/>,
+          loader:({params})=>fetch(`http://localhost:5000/categories/${params.id}`)
+        }
+      ]
+    }
   ]);
 
   export default router
