@@ -10,8 +10,8 @@ const RecipeDemos = () => {
       .then((data) => setCategories(data));
   }, []);
   return (
-    <div>
-      <p className=" font-semibold text-xl text-center my-2 text-yellow-400">
+    <div className="">
+      <p className=" font-semibold text-xl text-center mt-32 text-yellow-400">
         Choose a Category
       </p>
       <h2 className=" font-bold mb-8 text-6xl text-center">
