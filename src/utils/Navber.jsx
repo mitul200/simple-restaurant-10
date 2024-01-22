@@ -1,6 +1,16 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Pages/PrivetRouter/PrivetRouter";
+import { FaUserAlt } from "react-icons/fa";
 
 const Navber = () => {
+  const { user, logingOut } = useContext(AuthContext);
+  const handelLogout = () => {
+    logingOut().then(() => {});
+  };
+
+  console.log(user);
+
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -27,13 +37,13 @@ const Navber = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to='/'>Home</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to='/'>Blog</Link>
+                <Link to="/">Blog</Link>
               </li>
               <li>
-                <Link to='/'>abouts</Link>
+                <Link to="/">abouts</Link>
               </li>
             </ul>
           </div>
@@ -47,20 +57,46 @@ const Navber = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link to='/'> Home</Link>
+              <Link to="/"> Home</Link>
             </li>
             <li>
-              <Link to='/'> blog</Link>
+              <Link to="/"> blog</Link>
             </li>
             <li>
-              <Link to='/'> abouts</Link>
+              <Link to="/"> abouts</Link>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to="" className="btn mr-4">
-            Button
-          </Link>
+          {user ? (
+            <>
+              <p className=" font-semibold text-slate-800 mr-4">
+                {" "}
+                {user && user.email ? (
+                  <>
+                    <p className=" font-semibold text-slate-800 mr-4">
+                      Welcome :{user.email}
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <FaUserAlt />
+                  </>
+                )}
+              </p>
+            </>
+          ) : (
+            <></>
+          )}
+          {user ? (
+            <button onClick={handelLogout} className="btn">
+              LogOut
+            </button>
+          ) : (
+            <Link to="/login" className="btn mr-5">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>

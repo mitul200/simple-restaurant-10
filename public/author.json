@@ -1,0 +1,26 @@
+[
+    {
+        "chefPicture": "url_to_chef1_picture.jpg",
+        "chefName": "Chef Emma Johnson",
+        "yearsOfExperience": 15,
+        "numberOfRecipes": 120,
+        "likes": 3500,
+        "viewRecipesButton": "View Recipes of Chef Emma"
+    },
+    {
+        "chefPicture": "url_to_chef2_picture.jpg",
+        "chefName": "Chef Liam Brown",
+        "yearsOfExperience": 20,
+        "numberOfRecipes": 200,
+        "likes": 5000,
+        "viewRecipesButton": "View Recipes of Chef Liam"
+    },
+    {
+        "chefPicture": "url_to_chef3_picture.jpg",
+        "chefName": "Chef Ava Davis",
+        "yearsOfExperience": 10,
+        "numberOfRecipes": 80,
+        "likes": 2500,
+        "viewRecipesButton": "View Recipes of Chef Ava"
+    }
+]

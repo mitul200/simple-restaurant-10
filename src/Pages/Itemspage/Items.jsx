@@ -12,7 +12,7 @@ const Items = () => {
       <h2 className="text-center my-4 font-semibold text-7xl ">
         Latest Recipe
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mx-8 mt-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mx-8 mt-20">
         {items.slice(0, 6).map((item) => (
           <ItemsCards key={item._id} item={item}></ItemsCards>
         ))}

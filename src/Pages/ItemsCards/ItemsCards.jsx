@@ -2,7 +2,7 @@ import StarRating from "../../utils/StarRating";
 
 // eslint-disable-next-line react/prop-types
 const ItemsCards = ({ item }) => {
-  console.log(item);
+  // console.log(item);
   // eslint-disable-next-line react/prop-types
   const {image_url,title,rating} = item
   return (
