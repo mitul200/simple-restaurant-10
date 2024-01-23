@@ -10,11 +10,13 @@ import ItemsDetails from "../Pages/ItemsDetails/ItemsDetails";
 import Login from "../Pages/LoginRegister/Login";
 import Register from "../Pages/LoginRegister/Register";
 import Wall from "../Pages/wall/Wall";
+import ErrorPages from "../Pages/errorpages/ErrorPages";
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout/>,
+      errorElement:<ErrorPages/>,
       children:[
         {
             path:'/',
@@ -32,6 +34,7 @@ import Wall from "../Pages/wall/Wall";
     {
       path:"/categories",
       element:<MainLayout></MainLayout>,
+      errorElement:<ErrorPages></ErrorPages>,
       children:[
         {
           path:':id',
@@ -43,6 +46,7 @@ import Wall from "../Pages/wall/Wall";
     {
       path:'/items',
       element:<Layouts/>,
+      errorElement:<ErrorPages/>,
       children:[
         {
           path:':id',

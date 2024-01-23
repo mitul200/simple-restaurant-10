@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 const ItemsDetails = () => {
   const alldetails = useLoaderData();
   console.log(alldetails);
-  const { image_url, rating, title, category_id, author,details} = alldetails;
+  const { image_url, author,details} = alldetails;
   return (
     <div>
       <div className=" mx-auto md:ml-52 p-5 md:w-[900px]">
