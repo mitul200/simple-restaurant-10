@@ -3,14 +3,17 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+
 // Your web app's Firebase configuration
+console.log('enviroment variable',import.meta.env.VITE_PASS);
 const firebaseConfig = {
-  apiKey: "AIzaSyBpH_ijR_R5KCNlS8ApMw1vUJ3DgN_H-Uk",
-  authDomain: "simple-restaurant-a1e94.firebaseapp.com",
-  projectId: "simple-restaurant-a1e94",
-  storageBucket: "simple-restaurant-a1e94.appspot.com",
-  messagingSenderId: "692900191103",
-  appId: "1:692900191103:web:317048c1f10c067359584a"
+
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

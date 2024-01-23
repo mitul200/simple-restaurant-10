@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 const AuhtorDetails = ({ authorInfo }) => {
-  console.log(authorInfo);
-  const { chefPicture, chefName, yearsOfExperience, likes, viewRecipesButton } =
+  // console.log(authorInfo);
+  const { chefPicture, chefName, yearsOfExperience, likes} =
     authorInfo;
   return (
     <div>
