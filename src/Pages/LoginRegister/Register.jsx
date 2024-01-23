@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../PrivetRouter/PrivetRouter";
 
 const Register = () => {
@@ -34,6 +34,18 @@ const Register = () => {
                   type="name"
                   name="name"
                   placeholder="name"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Photo URL</span>
+                </label>
+                <input
+                  type="photo url"
+                  name="photo url"
+                  placeholder="Photo url"
                   className="input input-bordered"
                   required
                 />

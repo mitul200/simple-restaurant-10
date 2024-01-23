@@ -15,6 +15,7 @@ export const AuthContext = createContext(null);
 const PrivetRouter = ({ children }) => {
   const auth = getAuth(app);
   const [user, setUser] = useState(null);
+  const [loding , setLoding] = useState(true)
 
   const creatUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -40,6 +41,7 @@ const PrivetRouter = ({ children }) => {
     const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
       console.log(currentUser)
       setUser(currentUser);
+      setLoding(false)
     })
     return () => {
       return unsubcribe()
@@ -51,6 +53,7 @@ const PrivetRouter = ({ children }) => {
     user,
     creatUser,
     singInUser,
+    loding,
     logingOut,
     googleLoginUser,
     githubLoginUser

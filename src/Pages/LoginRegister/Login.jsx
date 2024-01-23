@@ -1,12 +1,19 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../PrivetRouter/PrivetRouter";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
+
+
+
 const Login = () => {
   const { singInUser,googleLoginUser,githubLoginUser } = useContext(AuthContext);
-  console.log(googleLoginUser);
+  // console.log(googleLoginUser);
+  const location = useLocation()
+  console.log(location)
+  const navigate = useNavigate()
+  const from = location.state?.from?.pathname || "/";
 
   const handelLogin = (event) => {
     event.preventDefault();
@@ -18,6 +25,7 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
+        navigate(from, { replace: true })
       })
       .catch((error) => console.log(error));
   };

@@ -9,6 +9,7 @@ import Layouts from "../Layouts/Layouts";
 import ItemsDetails from "../Pages/ItemsDetails/ItemsDetails";
 import Login from "../Pages/LoginRegister/Login";
 import Register from "../Pages/LoginRegister/Register";
+import Wall from "../Pages/wall/Wall";
 
   const router = createBrowserRouter([
     {
@@ -45,7 +46,7 @@ import Register from "../Pages/LoginRegister/Register";
       children:[
         {
           path:':id',
-          element:<ItemsDetails/>,
+          element:<Wall><ItemsDetails/></Wall>,
           loader:({params})=>fetch(`http://localhost:5000/items/${params.id}`)
         }
       ]
