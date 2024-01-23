@@ -5,7 +5,7 @@ const AuthorInfo = () => {
   const [info, setInfo] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/author")
+    fetch("https://simple-restaurant-server.vercel.app/author")
       .then((res) => res.json())
       .then((data) => {
         setInfo(data);

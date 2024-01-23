@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 const RecipeDemos = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/categories")
+    fetch("https://simple-restaurant-server.vercel.app/categories")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);
